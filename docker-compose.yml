@@ -10,9 +10,9 @@ services:
       - .docker/config/vhosts:/etc/apache2/sites-enabled
       - .:/home/wwwroot/sf4_apache
     depends_on:
-      - php
+      - php_apache
 
-  php:
+  php_apache:
     build: .docker/php
     container_name: php_apache
     restart: always
